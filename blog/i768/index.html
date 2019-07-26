@@ -1,0 +1,95 @@
+<!DOCTYPE html>	  
+<html>  
+<body> 
+<script src="https://www.w3schools.com/lib/w3.js"></script>				
+<script src="https://littleflute.github.io/JavaScript/blclass.js"></script>		
+<script src="https://littleflute.github.io/JavaScript/blApp.js"></script>		
+<div id="id_div_mp4i_bat_info" >								
+<a target="_blank" href="https://github.com/littleflute/bat/edit/master/bat/mp4index/mp4i.bat">v1.3. 21 * </a>	
+<a href="..">[..]</a> <button id="id_btn_4_blApp">+++++++++++blApp+++++++++</button>	
+</div>						 
+<div id="DivCurTime"></div> 			
+<br>  
+<div id="DivButtons"> 				
+ </div> 			
+<br> 	
+<div id="id_div_4_gif" style="border:1px solid green;" >				
+</div> 									
+<br> 	
+<div id="id_div_4_jpg" style="border:1px solid blue;" >				
+a01.jpg, 
+a02.jpg, 
+a03.jpg, 
+a04.jpg, 
+a05.jpg, 
+a06.jpg, 
+a07.jpg, 
+a08.jpg, 
+a09.jpg, 
+a10.jpg, 
+a11.jpg, 
+a12.jpg, 
+a13.jpg, 
+a14.jpg, 
+a15.jpg, 
+a16.jpg, 
+a17.jpg, 
+a18.jpg, 
+a19.jpg, 
+a20.jpg, 
+a21.jpg, 
+a22.jpg, 
+a23.jpg, 
+a24.jpg, 
+a25.jpg, 
+a26.jpg, 
+a27.jpg, 
+a28.jpg, 
+a29.jpg, 
+a30.jpg, 
+a31.jpg, 
+a32.jpg, 
+a33.jpg, 
+a34.jpg, 
+a35.jpg, 
+a36.jpg, 
+a37.jpg, 
+a38.jpg, 
+</div> 									
+<br> 	
+<div id="id_div_4_png" style="border:1px solid blue;" >				
+</div> 								 
+<br> 	
+<div id="id_div_4_lrcJS" style="border:1px solid red;display: none;" >		
+</div> 								
+<script>  
+var str4V = '<video id="myVideo" width="720" height="480" controls> ';				
+str4V += '<source src="v1.mp4" type="video/mp4">Your browser does not support HTML5 video.'; 	
+str4V += '</video>';  										
+var md4v = blo0.blMDiv(document.body,"id_mdiv_4_myVideo" , str4V , 300,100,500,400,blColor[1]); 	
+var vid = document.getElementById("myVideo"); 
+function play(i) {
+    vid.src=i; 
+    vid.load();
+    vid.play(); 
+}
+function getCurTime() {  
+   document.getElementById("DivCurTime").innerHTML= vid.currentTime; 
+}   
+function setCurTime(t) { 
+   vid.currentTime=t;  
+   getCurTime();
+}  
+function moveMS(ms) { 
+  vid.currentTime+=ms;
+  getCurTime();  
+}   
+var _loadScript = function (id,src){					
+var	r = document.createElement("script");				
+r.id = id;								
+r.src = src; 								
+document.body.appendChild(r);						
+}									
+_loadScript ("id_script_plx","plx.js");				
+</script> 
+</body> 
